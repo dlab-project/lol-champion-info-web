@@ -111,4 +111,287 @@ h1 {
     }
 }
 
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    margin: 2% auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(205, 30, 30, 0.1);
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #cd1e1e;
+    font-size: 1.8em;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #cd1e1e;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* 로딩 애니메이션 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #cd1e1e;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(205, 30, 30, 0.3);
+    border-top: 4px solid #cd1e1e;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    text-align: center;
+    color: #ff6b6b;
+    padding: 20px;
+}
+
+/* 챔피언 모달 정보 레이아웃 */
+.champion-modal-info {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+.champion-image-section {
+    text-align: center;
+}
+
+.modal-champion-image {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.champion-tags {
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #cd1e1e, #aa1818);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin: 3px;
+    box-shadow: 0 2px 8px rgba(205, 30, 30, 0.3);
+}
+
+.difficulty {
+    color: #cccccc;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* 스탯 그리드 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #cd1e1e;
+}
+
+/* 평가 바 */
+.ratings-grid {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rating-label {
+    min-width: 60px;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+.rating-bar {
+    flex: 1;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #cd1e1e, #ff4444);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.rating-text {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* 스킬 섹션 */
+.abilities-section {
+    display: grid;
+    gap: 15px;
+}
+
+.ability-item {
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ability-item.passive {
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.ability-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ability-info h4 {
+    margin: 0 0 8px 0;
+    color: #cd1e1e;
+    font-size: 1.1em;
+}
+
+.ability-info p {
+    color: #e0e0e0;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.ability-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.ability-stats span {
+    background: rgba(205, 30, 30, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        max-height: 90vh;
+    }
+    
+    .champion-modal-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modal-champion-image {
+        max-width: 200px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .ability-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ability-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+}
+
  

@@ -257,6 +257,9 @@ class ChampionAPI {
      * @returns {Object} 정제된 챔피언 정보
      */
     refineChampionData(championData) {
+        // 디버깅을 위해 패시브 이미지 정보 출력
+        console.log('패시브 이미지 정보:', championData.passive.image);
+        
         return {
             // 기본 정보
             id: championData.id,

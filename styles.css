@@ -185,6 +185,28 @@ h1 {
   font-weight: bold;
 }
 
+.champion-lore {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #fdcb6e;
+}
+
+.champion-lore h3 {
+  color: #fdcb6e;
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.champion-lore p {
+  margin: 0;
+  line-height: 1.6;
+  color: #e0e0e0;
+  font-size: 0.95em;
+  text-align: justify;
+}
+
 /* 스탯 섹션 */
 .champion-stats {
   margin-bottom: 30px;

@@ -407,6 +407,10 @@ class ChampionAPI {
                     <div class="champion-tags">
                         ${championInfo.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
+                    <div class="champion-lore">
+                        <h3>배경 이야기</h3>
+                        <p>${championInfo.lore}</p>
+                    </div>
                 </div>
             </div>
 

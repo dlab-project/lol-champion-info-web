@@ -4,6 +4,7 @@ class ChampionAPI {
         this.baseURL = 'https://ddragon.leagueoflegends.com/cdn/15.11.1/data/ko_KR/champion/';
         this.imageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/';
         this.loadingImageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
+        this.spellImageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/spell/';
         
         // 한국어-영문 챔피언 이름 매핑
         this.championNameMapping = {
@@ -213,9 +214,9 @@ class ChampionAPI {
     convertToEnglishName(championName) {
         const normalizedName = championName.trim();
         
-        // 이미 영문인 경우 그대로 반환
+        // 이미 영문인 경우 첫 글자만 대문자로 변환하여 반환
         if (!/[가-힣]/.test(normalizedName)) {
-            return normalizedName;
+            return normalizedName.charAt(0).toUpperCase() + normalizedName.slice(1).toLowerCase();
         }
         
         // 한국어-영문 매핑에서 찾기
@@ -330,14 +331,14 @@ class ChampionAPI {
                 cooldown: spell.cooldown,
                 cost: spell.cost,
                 range: spell.range,
-                image: `${this.imageBaseURL}${spell.image.full}`
+                image: `${this.spellImageBaseURL}${spell.image.full}`
             })),
             
             // 패시브 정보
             passive: {
                 name: championData.passive.name,
                 description: championData.passive.description,
-                image: `${this.imageBaseURL}${championData.passive.image.full}`
+                image: `${this.spellImageBaseURL}${championData.passive.image.full}`
             }
         };
     }
@@ -532,25 +533,5 @@ class ChampionAPI {
     }
 }
 
-// 사용 예시
-async function loadChampionExample() {
-    const championAPI = new ChampionAPI();
-    
-    try {
-        // 올라프 정보 불러오기
-        const olafInfo = await championAPI.getChampionInfo('Olaf');
-        
-        // 콘솔에 정보 출력
-        championAPI.displayChampionInfo(olafInfo);
-        
-        // HTML에 정보 표시 (선택사항)
-        // championAPI.displayChampionInfoInHTML(olafInfo, 'champion-container');
-        
-    } catch (error) {
-        console.error('챔피언 정보를 불러오는 중 오류가 발생했습니다:', error);
-    }
-}
-
 // 전역 객체로 내보내기
-window.ChampionAPI = ChampionAPI;
-window.loadChampionExample = loadChampionExample; 
+window.ChampionAPI = ChampionAPI; 

@@ -5,6 +5,7 @@ class ChampionAPI {
         this.imageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/';
         this.loadingImageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
         this.spellImageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/spell/';
+        this.passiveImageBaseURL = 'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/passive/';
         
         // 한국어-영문 챔피언 이름 매핑
         this.championNameMapping = {
@@ -449,7 +450,7 @@ class ChampionAPI {
             passive: {
                 name: championData.passive.name,
                 description: championData.passive.description,
-                image: `${this.spellImageBaseURL}${championData.passive.image.full}`
+                image: `${this.passiveImageBaseURL}${championData.passive.image.full}`
             }
         };
     }

@@ -20,127 +20,41 @@
   <!-- 챔피언 정보 표시 영역 -->
   <div id="champion-info" class="champion-info-container"></div>
 
-  <!-- 기존 챔피언 목록 -->
-  <div class="champions-grid">
-    <div class="container champion-card" data-champion="아트록스">
-      <h1>아트록스</h1>
-      <p class="subtitle">다르킨의 검</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg" alt="아트록스" class="champion-image">
-    </div>
+  <!-- 역할군 탭 -->
+  <div class="role-tabs">
+    <button class="role-tab active" data-role="all">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Ahri_0.jpg" alt="전체" class="role-icon">
+      <span>전체</span>
+    </button>
+    <button class="role-tab" data-role="Fighter">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Garen_0.jpg" alt="전사" class="role-icon">
+      <span>전사</span>
+    </button>
+    <button class="role-tab" data-role="Mage">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Ahri_0.jpg" alt="마법사" class="role-icon">
+      <span>마법사</span>
+    </button>
+    <button class="role-tab" data-role="Assassin">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Zed_0.jpg" alt="암살자" class="role-icon">
+      <span>암살자</span>
+    </button>
+    <button class="role-tab" data-role="Marksman">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Jinx_0.jpg" alt="원거리" class="role-icon">
+      <span>원거리</span>
+    </button>
+    <button class="role-tab" data-role="Support">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Thresh_0.jpg" alt="지원가" class="role-icon">
+      <span>지원가</span>
+    </button>
+    <button class="role-tab" data-role="Tank">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Malphite_0.jpg" alt="탱커" class="role-icon">
+      <span>탱커</span>
+    </button>
+  </div>
 
-    <div class="container champion-card" data-champion="아리">
-      <h1>아리</h1>
-      <p class="subtitle">구미호</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ahri_0.jpg" alt="아리" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="케넨">
-      <h1>케넨</h1>
-      <p class="subtitle">폭풍의 심장</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Kennen_0.jpg" alt="케넨" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="올라프">
-      <h1>올라프</h1>
-      <p class="subtitle">광전사</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Olaf_0.jpg" alt="올라프" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="자크">
-      <h1>자크</h1>
-      <p class="subtitle">무적의 힘</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Zac_0.jpg" alt="자크" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="애니비아">
-      <h1>애니비아</h1>
-      <p class="subtitle">얼음 불사조</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Anivia_0.jpg" alt="애니비아" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="말파이트">
-      <h1>말파이트</h1>
-      <p class="subtitle">거석의 파편</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Malphite_0.jpg" alt="말파이트" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="야스오">
-      <h1>야스오</h1>
-      <p class="subtitle">용서받지 못한 자</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Yasuo_0.jpg" alt="야스오" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="리신">
-      <h1>리 신</h1>
-      <p class="subtitle">맹인의 수도승</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/LeeSin_0.jpg" alt="리 신" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="루시안">
-      <h1>루시안</h1>
-      <p class="subtitle">정화의 사수</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Lucian_0.jpg" alt="루시안" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="징크스">
-      <h1>징크스</h1>
-      <p class="subtitle">난동꾼</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg" alt="징크스" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="블리츠크랭크">
-      <h1>블리츠크랭크</h1>
-      <p class="subtitle">강철의 파수꾼</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Blitzcrank_0.jpg" alt="블리츠크랭크" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="모르가나">
-      <h1>모르가나</h1>
-      <p class="subtitle">타락한 자</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Morgana_0.jpg" alt="모르가나" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="나서스">
-      <h1>나서스</h1>
-      <p class="subtitle">사막의 파수꾼</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Nasus_0.jpg" alt="나서스" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="가렌">
-      <h1>가렌</h1>
-      <p class="subtitle">데마시아의 힘</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Garen_0.jpg" alt="가렌" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="카타리나">
-      <h1>카타리나</h1>
-      <p class="subtitle">사악한 칼날</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Katarina_0.jpg" alt="카타리나" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="피즈">
-      <h1>피즈</h1>
-      <p class="subtitle">대양의 장난꾸러기</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Fizz_0.jpg" alt="피즈" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="트위치">
-      <h1>트위치</h1>
-      <p class="subtitle">역병쥐</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Twitch_0.jpg" alt="트위치" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="아이번">
-      <h1>아이번</h1>
-      <p class="subtitle">자연의 친구</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ivern_0.jpg" alt="아이번" class="champion-image">
-    </div>
-
-    <div class="container champion-card" data-champion="벡스">
-      <h1>벡스</h1>
-      <p class="subtitle">우울한 요들</p>
-      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Vex_0.jpg" alt="벡스" class="champion-image">
-    </div>
+  <!-- 챔피언 목록 -->
+  <div class="champions-grid" id="champions-container">
+    <!-- 챔피언 카드들이 여기에 동적으로 로드됩니다 -->
   </div>
 
   <script src="champion-api.js"></script>
@@ -148,7 +62,12 @@
     // 페이지 로드 시 초기화
     document.addEventListener('DOMContentLoaded', function() {
       const championAPI = new ChampionAPI();
-      championAPI.addChampionCardClickEvents();
+      
+      // 역할군 탭 설정
+      championAPI.setupRoleTabs();
+      
+      // 초기에는 모든 챔피언 표시
+      championAPI.displayChampionsByRole('all');
     });
 
     // 챔피언 검색 함수

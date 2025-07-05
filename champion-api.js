@@ -204,6 +204,117 @@ class ChampionAPI {
             '조이': 'Zoe',
             '자이라': 'Zyra'
         };
+
+        // 역할군별 챔피언 데이터
+        this.championsByRole = {
+            'Fighter': [
+                { name: '아트록스', title: '다르킨의 검', image: 'Aatrox_0.jpg' },
+                { name: '올라프', title: '광전사', image: 'Olaf_0.jpg' },
+                { name: '가렌', title: '데마시아의 힘', image: 'Garen_0.jpg' },
+                { name: '다리우스', title: '녹서스의 손', image: 'Darius_0.jpg' },
+                { name: '리븐', title: '추방된 자', image: 'Riven_0.jpg' },
+                { name: '세트', title: '아이오니아의 분노', image: 'Sett_0.jpg' },
+                { name: '일라오이', title: '크라켄의 여사제', image: 'Illaoi_0.jpg' },
+                { name: '우르곳', title: '자운의 거신', image: 'Urgot_0.jpg' },
+                { name: '볼리베어', title: '불멸의 폭풍', image: 'Volibear_0.jpg' },
+                { name: '워윅', title: '자운의 경계선', image: 'Warwick_0.jpg' },
+                { name: '레넥톤', title: '사막의 도살자', image: 'Renekton_0.jpg' },
+                { name: '나서스', title: '사막의 파수꾼', image: 'Nasus_0.jpg' },
+                { name: '트린다미어', title: '야만의 왕', image: 'Tryndamere_0.jpg' },
+                { name: '신 짜오', title: '데마시아의 창', image: 'XinZhao_0.jpg' },
+                { name: '야스오', title: '용서받지 못한 자', image: 'Yasuo_0.jpg' }
+            ],
+            'Mage': [
+                { name: '아리', title: '구미호', image: 'Ahri_0.jpg' },
+                { name: '애니비아', title: '얼음 불사조', image: 'Anivia_0.jpg' },
+                { name: '케넨', title: '폭풍의 심장', image: 'Kennen_0.jpg' },
+                { name: '모르가나', title: '타락한 자', image: 'Morgana_0.jpg' },
+                { name: '벡스', title: '우울한 요들', image: 'Vex_0.jpg' },
+                { name: '애니', title: '어둠의 아이', image: 'Annie_0.jpg' },
+                { name: '브랜드', title: '타오르는 복수', image: 'Brand_0.jpg' },
+                { name: '카서스', title: '죽음의 노래', image: 'Karthus_0.jpg' },
+                { name: '럭스', title: '데마시아의 빛', image: 'Lux_0.jpg' },
+                { name: '베이가', title: '악의의 작은 마법사', image: 'Veigar_0.jpg' },
+                { name: '빅토르', title: '기계화의 선구자', image: 'Viktor_0.jpg' },
+                { name: '말자하', title: '공허의 예언자', image: 'Malzahar_0.jpg' },
+                { name: '리산드라', title: '얼음 마녀', image: 'Lissandra_0.jpg' },
+                { name: '오리아나', title: '시계태엽 소녀', image: 'Orianna_0.jpg' },
+                { name: '신드라', title: '어둠의 여제', image: 'Syndra_0.jpg' },
+                { name: '조이', title: '황혼의 메신저', image: 'Zoe_0.jpg' },
+                { name: '세라핀', title: '꿈꾸는 소녀', image: 'Seraphine_0.jpg' }
+            ],
+            'Assassin': [
+                { name: '카타리나', title: '사악한 칼날', image: 'Katarina_0.jpg' },
+                { name: '피즈', title: '대양의 장난꾸러기', image: 'Fizz_0.jpg' },
+                { name: '리신', title: '맹인의 수도승', image: 'LeeSin_0.jpg' },
+                { name: '제드', title: '그림자의 주인', image: 'Zed_0.jpg' },
+                { name: '탈론', title: '검의 그림자', image: 'Talon_0.jpg' },
+                { name: '렌가', title: '추적하는 사자', image: 'Rengar_0.jpg' },
+                { name: '카직스', title: '공허의 사신', image: 'Khazix_0.jpg' },
+                { name: '녹턴', title: '영원한 악몽', image: 'Nocturne_0.jpg' },
+                { name: '샤코', title: '악마 어릿광대', image: 'Shaco_0.jpg' },
+                { name: '케인', title: '그림자 사신', image: 'Kayn_0.jpg' },
+                { name: '아카리', title: '그림자 주먹', image: 'Akali_0.jpg' },
+                { name: '피오라', title: '대검사', image: 'Fiora_0.jpg' },
+                { name: '마스터 이', title: '우주 검사', image: 'MasterYi_0.jpg' },
+                { name: '판테온', title: '무적의 창', image: 'Pantheon_0.jpg' },
+                { name: '퀸', title: '데마시아의 날개', image: 'Quinn_0.jpg' }
+            ],
+            'Marksman': [
+                { name: '루시안', title: '정화의 사수', image: 'Lucian_0.jpg' },
+                { name: '징크스', title: '난동꾼', image: 'Jinx_0.jpg' },
+                { name: '트위치', title: '역병쥐', image: 'Twitch_0.jpg' },
+                { name: '애쉬', title: '프렐요드의 여왕', image: 'Ashe_0.jpg' },
+                { name: '케이틀린', title: '필트오버의 보안관', image: 'Caitlyn_0.jpg' },
+                { name: '드레이븐', title: '영광의 사형집행인', image: 'Draven_0.jpg' },
+                { name: '미스 포츈', title: '해적의 여왕', image: 'MissFortune_0.jpg' },
+                { name: '바루스', title: '정의의 화살', image: 'Varus_0.jpg' },
+                { name: '베인', title: '어둠 사냥꾼', image: 'Vayne_0.jpg' },
+                { name: '시비르', title: '사막의 여왕', image: 'Sivir_0.jpg' },
+                { name: '코그모', title: '공허의 입', image: 'KogMaw_0.jpg' },
+                { name: '칼리스타', title: '복수의 창', image: 'Kalista_0.jpg' },
+                { name: '진', title: '사신', image: 'Jhin_0.jpg' },
+                { name: '사미라', title: '사막의 장미', image: 'Samira_0.jpg' },
+                { name: '아펠리오스', title: '신의 무기', image: 'Aphelios_0.jpg' },
+                { name: '제리', title: '자운의 쥐', image: 'Zeri_0.jpg' }
+            ],
+            'Support': [
+                { name: '블리츠크랭크', title: '강철의 파수꾼', image: 'Blitzcrank_0.jpg' },
+                { name: '아이번', title: '자연의 친구', image: 'Ivern_0.jpg' },
+                { name: '소나', title: '현의 소녀', image: 'Sona_0.jpg' },
+                { name: '소라카', title: '별의 아이', image: 'Soraka_0.jpg' },
+                { name: '쓰레쉬', title: '영혼의 사신', image: 'Thresh_0.jpg' },
+                { name: '나미', title: '물의 소녀', image: 'Nami_0.jpg' },
+                { name: '잔나', title: '폭풍의 분신', image: 'Janna_0.jpg' },
+                { name: '레오나', title: '여명의 빛', image: 'Leona_0.jpg' },
+                { name: '룰루', title: '요정 마법사', image: 'Lulu_0.jpg' },
+                { name: '유미', title: '마법 고양이', image: 'Yuumi_0.jpg' },
+                { name: '라칸', title: '매력의 수호자', image: 'Rakan_0.jpg' },
+                { name: '파이크', title: '피의 항구', image: 'Pyke_0.jpg' },
+                { name: '세나', title: '구원의 빛', image: 'Senna_0.jpg' },
+                { name: '렐', title: '철의 여사제', image: 'Rell_0.jpg' },
+                { name: '레나타 글라스크', title: '화학 기술자', image: 'Renata_0.jpg' },
+                { name: '밀리오', title: '따뜻한 친구', image: 'Milio_0.jpg' }
+            ],
+            'Tank': [
+                { name: '자크', title: '무적의 힘', image: 'Zac_0.jpg' },
+                { name: '말파이트', title: '거석의 파편', image: 'Malphite_0.jpg' },
+                { name: '브라움', title: '프렐요드의 심장', image: 'Braum_0.jpg' },
+                { name: '람머스', title: '갑옷 거북', image: 'Rammus_0.jpg' },
+                { name: '초가스', title: '공포의 현신', image: 'Chogath_0.jpg' },
+                { name: '세주아니', title: '겨울의 분노', image: 'Sejuani_0.jpg' },
+                { name: '오른', title: '용암 거인', image: 'Ornn_0.jpg' },
+                { name: '케사', title: '공허의 딸', image: 'Kaisa_0.jpg' },
+                { name: '알리스타', title: '미노타우로스', image: 'Alistar_0.jpg' },
+                { name: '아무무', title: '슬픈 미라', image: 'Amumu_0.jpg' },
+                { name: '갈리오', title: '위대한 석상', image: 'Galio_0.jpg' },
+                { name: '헤카림', title: '전쟁의 영혼', image: 'Hecarim_0.jpg' },
+                { name: '마오카이', title: '뒤틀린 나무정령', image: 'Maokai_0.jpg' },
+                { name: '누누와 윌럼프', title: '소년과 설인', image: 'Nunu_0.jpg' },
+                { name: '스카너', title: '수정 독수리', image: 'Skarner_0.jpg' },
+                { name: '우디르', title: '야성의 영혼', image: 'Udyr_0.jpg' }
+            ]
+        };
     }
 
     /**
@@ -257,9 +368,6 @@ class ChampionAPI {
      * @returns {Object} 정제된 챔피언 정보
      */
     refineChampionData(championData) {
-        // 디버깅을 위해 패시브 이미지 정보 출력
-        console.log('패시브 이미지 정보:', championData.passive.image);
-        
         return {
             // 기본 정보
             id: championData.id,
@@ -502,6 +610,62 @@ class ChampionAPI {
                 </div>
             </div>
         `;
+    }
+
+    /**
+     * 역할군별 챔피언을 표시합니다
+     * @param {string} role - 역할군 ('all', 'Fighter', 'Mage', 'Assassin', 'Marksman', 'Support', 'Tank')
+     */
+    displayChampionsByRole(role = 'all') {
+        const container = document.getElementById('champions-container');
+        if (!container) return;
+
+        let championsToShow = [];
+        
+        if (role === 'all') {
+            // 모든 역할군의 챔피언을 합침
+            Object.values(this.championsByRole).forEach(champions => {
+                championsToShow = championsToShow.concat(champions);
+            });
+        } else {
+            // 특정 역할군의 챔피언만 표시
+            championsToShow = this.championsByRole[role] || [];
+        }
+
+        // 챔피언 카드 HTML 생성
+        const championsHTML = championsToShow.map(champion => `
+            <div class="container champion-card" data-champion="${champion.name}">
+                <h1>${champion.name}</h1>
+                <p class="subtitle">${champion.title}</p>
+                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.image}" alt="${champion.name}" class="champion-image">
+            </div>
+        `).join('');
+
+        container.innerHTML = championsHTML;
+        
+        // 클릭 이벤트 다시 추가
+        this.addChampionCardClickEvents();
+    }
+
+    /**
+     * 역할군 탭 이벤트를 설정합니다
+     */
+    setupRoleTabs() {
+        const roleTabs = document.querySelectorAll('.role-tab');
+        
+        roleTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 모든 탭에서 active 클래스 제거
+                roleTabs.forEach(t => t.classList.remove('active'));
+                
+                // 클릭된 탭에 active 클래스 추가
+                tab.classList.add('active');
+                
+                // 해당 역할군의 챔피언 표시
+                const role = tab.getAttribute('data-role');
+                this.displayChampionsByRole(role);
+            });
+        });
     }
 
     /**
